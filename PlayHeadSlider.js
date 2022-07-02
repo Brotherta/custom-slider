@@ -139,6 +139,7 @@ export default class PlayHeadSlider extends HTMLElement {
         let approxPixel = (approximate*this.sliderWidth)/this.max;
         let newPos = approxPixel + this.sliderPos - 5;
         this.thumb.style.left = newPos+"px";
+        console.log(this._sliderValue);
     }
 
     documentHandler() {
