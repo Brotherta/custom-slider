@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>custom</title>
+    <script type="module" src="index.js"></script>
+
+<style>
+    .container {
+        width: 600px;
+        height: 500px;
+        border: black solid 1px;
+    }
+    body {
+        overflow: auto;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <playhead-slider min="0" max="500" step="1" start="1"></playhead-slider>
+</div>
+<button id="test">test</button>
+
+<script>
+    let b = document.querySelector("#test");
+    b.onclick = () => {
+        let el = document.querySelector("playhead-slider");
+        let i = 1;
+        setInterval(() => {
+            el.changeValue(i);
+            i+=1;
+        },10)
+    }
+</script>
+
+</body>
+
+
+</html>
